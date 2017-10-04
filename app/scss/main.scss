@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none !important;
+}
+
+body{
+  background: black;
+  color: #fff;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.clear-fix{
+  clear: both;
+}
+
+@import "../components/search-component/searchComponent";
+@import "../components/planets/planets";
+@import "../../app/states/login/login";
+@import "../../app/states/main/main";

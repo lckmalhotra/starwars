@@ -1,0 +1,26 @@
+<div class="main">
+    <div class="logout">
+        <button ng-click="model.logout()">Logout</button>
+    </div>
+    <div class="main--logo">
+        <a href="#"><img src="./app/img/logo.png"></a>
+    </div>
+
+    <h1>Hi
+        <small>{{model.user.name}}</small>
+        , Welcome to the galaxy..
+    </h1>
+    <h5 ng-if="model.count <= 0 && model.user.name === 'Luke Skywalker'">You are out of your search limit, please try
+        after some time</h5>
+    <search-component count="model.count"></search-component>
+
+    <div class="clear-fix"></div>
+
+    <button class="orbit-button" ng-class="{'active' : i === model.selected }" ng-repeat="i in [1,2,3,4,5,6,7]"
+            ng-click="model.getOrbit(i)"> Orbit {{i}}
+    </button>
+    <planets list="model.planets"></planets>
+    <h4 ng-show="model.isLoading">Loading..</h4>
+
+
+</div>
